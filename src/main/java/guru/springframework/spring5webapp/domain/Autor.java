@@ -55,4 +55,19 @@ public class Autor {
     public void setLivros(Set<Livro> livros) {
         this.livros = livros;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Autor autor = (Autor) o;
+
+        return id == autor.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }
