@@ -57,6 +57,16 @@ public class Autor {
     }
 
     @Override
+    public String toString() {
+        return "Autor{" +
+                "id=" + id +
+                ", primeiroNome='" + primeiroNome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", livros=" + livros +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
